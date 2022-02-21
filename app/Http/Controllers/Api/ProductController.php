@@ -20,7 +20,7 @@ class ProductController extends Controller
 
         $validator =Validator::make($request->all(),[
             'name' => 'required',
-            'image' => 'required',
+            'image' => 'mimes:jpg,png,jpeg,gif',
             'brand' => 'required',
             'price' => 'required|numeric',
             'category' => 'required',
@@ -106,7 +106,7 @@ class ProductController extends Controller
     {
         $validator =Validator::make($request->all(),[
             'name' => 'required',
-            'image' => 'required',
+            'image' => 'mimes:jpg,png,jpeg,gif',
             'brand' => 'required',
             'price' => 'required',
             'category' => 'required',
